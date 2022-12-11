@@ -128,7 +128,7 @@ contract Voting is Ownable {
     }
 
     //Workflow Part - Only Owner able to change the workflow of the sessions Vote
-    //We allow owner to change the status only
+    //We check if the previous phase makes sense in the workflow before to allow owner to change the status
 
     function setRegisteringVotersPhase() external onlyOwner {
         //owner can restart from the beginning the voting process
